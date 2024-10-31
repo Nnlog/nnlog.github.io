@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <!-- Meta Information -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Nina Loginova">
+    <meta name="theme-color" content="#fc6f5c">
+    <meta name="description" content="Estimands in Clinical Studies">
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
+        integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
+        integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css"
+        integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css"
+        crossorigin="anonymous" title="hl-light">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto+Mono&display=swap">
+    <link rel=stylesheet href=../../css/academia.min.b246554d075350d61b44c126dfbcbe05.css>
+    <title>Estimands | Nina Loginova</title>
+</head>
+
+<body id=top data-spy=scroll data-target=#TableOfContents data-offset=71>
+    <nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id=navbar-main>
+        <div class=container>
+            <a class=navbar-brand href=../../index.html>Nina Loginova</a>
+            <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar aria-controls=navbar
+                aria-expanded=false aria-label="Toggle navigation">
+                <span>
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id=navbar>
+                <ul class="navbar-nav ml-auto">
+                    <li class=nav-item>
+                        <a class=nav-link href=../../index.html#about>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class=nav-item>
+                        <a class=nav-link href=../../index.html#experience>
+                            <span>Experience</span>
+                        </a>
+                    </li>
+                    <li class=nav-item>
+                        <a class=nav-link href=../../index.html##publications>
+                            <span>Publications</span>
+                        </a>
+                    </li>
+                    <li class=nav-item>
+                        <a class=nav-link href=../../index.html#posts>
+                            <span>Methods</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <article class="article py-5" itemscope itemtype=http://schema.org/Article>
+        <div class="container split-header">
+            <div class="row justify-content-center">
+                <div class=col-lg-8>
+                    <img class="img-fluid w-100" loading="lazy" src=./featured.webp alt="estimands">
+                    <span class=article-header-caption>
+                        Image credit:
+                        <a
+                            href=https://pixabay.com/de/users/geralt-9301/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6973869 />
+                        <strong>Pixabay</strong>
+                        </a>
+                    </span>
+                </div>
+                <div class=col-lg-8>
+                    <h1>Estimands</h1>
+                    <meta content itemprop=datePublished>
+                    <meta content itemprop=dateModified>
+                    <div class=article-metadata>
+                        <div>
+                            <span>
+                                <a href=https://de.linkedin.com/in/nina-loginova />Nina Loginova</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class=article-container>
+            <div class=article-style itemprop=articleBody>
+
+                <p>In clinical trials, it is essential to clearly define the goal of the study and what exactly is being
+                    measured. To address this, the European Medicines Agency introduced the concept of
+                    <em>estimands</em> in their 2020 addendum on estimands and sensitivity analysis. This framework
+                    helps align the planning, design, conduct, analysis, and interpretation of clinical trials. An
+                    estimand provides a precise description of the treatment effect that corresponds to the clinical
+                    question posed by the trial.
+                </p>
+
+                <h2>What Is an Estimand?</h2>
+
+                <p>An <strong>estimand</strong> summarizes what outcomes would occur in the same patients under
+                    different treatment conditions being compared. It provides clarity by specifying the population,
+                    treatment, variable (endpoint), and how intercurrent events — events that happen after treatment
+                    initiation — will be handled. Intercurrent events, such as treatment discontinuation or use of
+                    additional medication, must be accounted for as they can affect the interpretation or measurement of
+                    the treatment effect.</p>
+
+                <p>The estimand is complemented by the <strong>estimator</strong>, a method used to calculate the
+                    estimated value of the treatment effect based on clinical trial data, which ultimately results in
+                    the <strong>estimate</strong>, a numerical value representing the treatment effect.</p>
+
+                <h2>Why Are Estimands Important?</h2>
+
+                <p>The concept of estimands ensures that the treatment effect being measured is clearly defined and
+                    addresses the clinical question at hand. This approach avoids potential confusion caused by
+                    intercurrent events, which can obscure the interpretation of trial results if not properly accounted
+                    for. For example, in oncology trials, patients may switch treatments, and the way these events are
+                    managed in the trial design can affect the trial’s conclusions. By explicitly addressing these
+                    events within the estimand framework, the trial can provide a more accurate and relevant assessment
+                    of the treatment effect.</p>
+
+                <h2>Attributes of an Estimand</h2>
+
+                <p>To define an estimand, several key attributes must be specified:</p>
+                <ol>
+                    <li><strong>Treatment Condition</strong>: This includes both the treatment of interest and any
+                        alternative treatments for comparison. These could involve individual interventions or more
+                        complex regimens.</li>
+                    <li><strong>Population</strong>: The patient population targeted by the trial, which may be the
+                        entire population or a specific subgroup based on characteristics such as baseline measurements
+                        or specific intercurrent events.</li>
+                    <li><strong>Variable (Endpoint)</strong>: The clinical outcome or measurement used to address the
+                        trial’s question. This can include whether a patient experienced an intercurrent event, and how
+                        that event is factored into the trial's outcome.</li>
+                    <li><strong>Handling of Intercurrent Events</strong>: Strategies are needed to address intercurrent
+                        events. These may include treatment policy, hypothetical strategies, or focusing on treatment up
+                        to the point of the event. The choice of strategy affects how the trial data are interpreted.
+                    </li>
+                </ol>
+
+                <h2>Handling Intercurrent Events</h2>
+
+                <p>Intercurrent events can significantly affect how the results of a clinical trial are interpreted.
+                    These events, such as treatment discontinuation, the introduction of additional medication, or even
+                    a patient’s death, occur after the initiation of treatment and can complicate the measurement of
+                    treatment effects. Addressing these events is essential when defining an estimand because they may
+                    either influence the interpretation of results or make it impossible to measure the planned
+                    outcomes. Several strategies can be used to manage intercurrent events, ensuring that the clinical
+                    question of interest remains clear.</p>
+
+
+                <ol>
+                    <li><strong>Treatment Policy Strategy</strong>: In this approach, all intercurrent events are
+                        considered part of the treatment process. For example, if a patient discontinues the treatment,
+                        the outcome is still measured as if the patient were continuing in the study. This strategy
+                        reflects a <em>real-world</em> approach, where treatment changes are part of normal clinical
+                        practice.</li>
+                    <li><strong>Hypothetical Strategy</strong>: Here, the effect of the treatment is estimated by
+                        imagining a scenario in which the intercurrent event did not occur. For instance, if a patient
+                        discontinues treatment due to an adverse effect, the hypothetical strategy assumes the patient
+                        continued treatment, allowing the estimand to assess what would have happened under ideal
+                        conditions.</li>
+                    <li><strong>While on Treatment Strategy</strong>: This strategy focuses on the period during which
+                        the patient remains on the initially assigned treatment. Once the patient experiences an
+                        intercurrent event (e.g., treatment discontinuation), data after that point are excluded from
+                        the analysis. The effect is measured only while the patient is under the treatment regimen.</li>
+                    <li><strong>Principal Stratum Strategy</strong>: This approach focuses on a specific subgroup of
+                        patients defined by whether or not they experience an intercurrent event. For example, the
+                        estimand may target only patients who do not switch treatments during the trial, providing
+                        insight into treatment effects for this specific group.</li>
+                </ol>
+
+
+                <p>The use of estimands ensures that the goals of a clinical trial are clearly defined and that the
+                    impact of treatment is measured accurately. By addressing intercurrent events and providing a
+                    structured approach to trial design, estimands help align the planning, analysis, and interpretation
+                    phases of clinical trials, ultimately leading to better clarity in the assessment of treatment
+                    effects. </p>
+
+            </div>
+            <div class=article-tags>
+                <a class="badge badge-light" href=/academia/site/tags/chi-square />Estimands</a>
+                <a class="badge badge-light" href=/academia/site/tags/probabilities />Clinical Studies</a>
+            </div>
+        </div>
+    </article>
+    <div class=container>
+        <footer class=site-footer>
+            <div class=container>
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+
+                        <p class=mb-0>Copyright © 2024 | Powered by
+                            <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic
+                                theme</a>
+                            for <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- External JavaScript Files -->
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js
+        integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js
+        integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js
+        integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js
+        integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin=anonymous></script>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src=./../../js/academia.min.6c2ba2801d406881b3c2277043cedd76.js></script>
+</body>
+
+</html>

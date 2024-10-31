@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <!-- Meta Information -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Nina Loginova">
+    <meta name="theme-color" content="#fc6f5c">
+    <meta name="description" content="Computing and approximating multivariate chi-square probabilities">
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
+        integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
+        integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css"
+        integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css"
+        crossorigin="anonymous" title="hl-light">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto+Mono&display=swap">
+    <link rel=stylesheet href=../../css/academia.min.b246554d075350d61b44c126dfbcbe05.css>
+    <title>Computing and approximating multivariate chi-square probabilities | Nina Loginova</title>
+</head>
+
+<body id=top data-spy=scroll data-target=#TableOfContents data-offset=71>
+    <nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id=navbar-main>
+        <div class=container>
+            <a class=navbar-brand href=../../index.html>Nina Loginova</a>
+            <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar aria-controls=navbar
+                aria-expanded=false aria-label="Toggle navigation">
+                <span>
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id=navbar>
+                <ul class="navbar-nav ml-auto">
+                    <li class=nav-item>
+                        <a class=nav-link href=../../index.html#about>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class=nav-item>
+                        <a class=nav-link href=../../index.html#experience>
+                            <span>Experience</span>
+                        </a>
+                    </li>
+                    <li class=nav-item>
+                        <a class=nav-link href=../../index.html##publications>
+                            <span>Publications</span>
+                        </a>
+                    </li>
+                    <li class=nav-item>
+                        <a class=nav-link href=../../index.html#posts>
+                            <span>Methods</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <article class="article py-5" itemscope itemtype=http://schema.org/Article>
+        <div class="container split-header">
+            <div class="row justify-content-center">
+                <div class=col-lg-8>
+                    <img class="img-fluid w-100" loading="lazy" src=./featured.webp alt="dna-analyse-forschung">
+                    <span class=article-header-caption>
+                        Image credit:
+                        <a href=https://pixabay.com/de/illustrations/dna-analyse-forschung-genmaterial-3539309 />
+                        <strong>Pixabay</strong>
+                        </a>
+                    </span>
+                </div>
+                <div class=col-lg-8>
+                    <h1>Computing and approximating multivariate chi-square probabilities</h1>
+                    <meta content itemprop=datePublished>
+                    <meta content itemprop=dateModified>
+                    <div class=article-metadata>
+                        <div>
+                            <span>
+                                <a href=https://de.linkedin.com/in/nina-loginova />Nina Loginova</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class=article-container>
+            <div class=article-style itemprop=articleBody>
+
+                <p>The <strong>multivariate chi-squared distribution</strong> is an extension of the univariate
+                    chi-squared distribution to multiple variables. It is often used in multivariate statistics,
+                    particularly in hypothesis testing and multivariate analysis. Examples include comparing covariance
+                    matrices across groups, testing models in multivariate regression, or assessing the goodness-of-fit
+                    for multidimensional data.</p>
+
+                <p>If \( \mathbf{Z}_1, \mathbf{Z}_2, \dots , \mathbf{Z}_\nu \) are independent and identically
+                    distributed Gaussian random vectors with correlation matrix \( R \), then the sum of their squares
+                    \( \mathbf{X} \) follows a multivariate chi-squared distribution.</p>
+
+                <p>The cumulative distribution function of the maximum of \( M \) dependent random variables \( X_1,
+                    X_2, \dots, X_M \) is:</p>
+
+                <p>
+                    \[
+                    F_M(x) \equiv F_M(x, \nu, R) := P \left( \bigcap_{j=1}^M \{X_j \leq x\} \right)
+                    \]
+                </p>
+
+                <p>where \( \mathbf{X} = (X_1, \dots, X_M)^\top \) and each \( X_j = \sum_{i=1}^{\nu} Z_{ij}^2 \) for \(
+                    j = 1, \dots, M \).</p>
+
+                <p>The multivariate chi-squared distribution does not have a simple closed-form expression for its
+                    distribution function. Its distribution function involves integrating over all possible values in a
+                    multidimensional space, which cannot be easily solved analytically.</p>
+
+                <h2>Challenges and Computational Methods</h2>
+
+                <p>Due to the complexities of the multivariate chi-squared distribution, practical calculations often
+                    rely on numerical methods or Monte Carlo simulations, especially in high-dimensional cases. Software
+                    packages like the <strong>R package mvtnorm</strong> do not directly support multivariate
+                    chi-squared distribution calculations, and <strong>SAS's PROC FREQ</strong> is limited to univariate
+                    and bivariate analyses without tools for multivariate chi-squared probabilities.</p>
+
+                <p>However, under certain assumptions, matrix factorization methods can be used to approximate
+                    multivariate chi-squared probabilities more efficiently "for (in principle) arbitrary dimension M
+                    and arbitrary degrees of freedom” (Stange et al., 2015). These computational methods are based on
+                    the idea that the correlation structure in the k-variate marginal distributions can be approximated
+                    using low-rank correlation matrices.</p>
+
+                <p>If “the underlying correlation matrix fulfills certain structural properties”(Kim et. al, 2023), the
+                    quantiles of the multivariate chi-squared distribution can be computed numerically. The <strong>main
+                        idea</strong> is to use low-rank factorization of the correlation matrices, reducing the problem
+                    to the computation of lower-dimensional marginal distributions, which is possible with standard
+                    computer programs.</p>
+
+                <h2>Applications in Genetic Data</h2>
+
+                <p>We developed MATLAB programs to implement these methods and demonstrated their accuracy and
+                    efficiency by comparing them to traditional approaches. Using real genetic data, we applied our
+                    computational methods to test for significant associations between genetic variations and specific
+                    phenotypes.</p>
+
+                <p>In genetic association studies, it is common to analyze many contingency tables simultaneously, each
+                    representing study data for a single position (locus) on the genome. Locus-specific chi-squared
+                    statistics often exhibit strong dependencies due to the biological mechanism of inheritance. These
+                    dependencies lead to low-rank correlation matrices, which meet the assumptions required for our
+                    computational methods under <strong>familywise error rate (FWER)</strong> control.</p>
+                <div class=col-lg-8>
+                    <img class="img-fluid w-60" loading="lazy" src=./dna.png alt="dna">
+                    <span class=article-header-caption>
+                        Image credit:
+                        <a href=https://pixabay.com/de/vectors/dna-dna-strang-dna-helix-wendel-1116336/ />
+                        <strong>Pixabay</strong>
+                        </a>
+                    </span>
+                </div>
+
+                <h2>Multiple Hypothesis Testing</h2>
+
+                <p>In large-scale genetic studies, testing multiple hypotheses increases the risk of false positives
+                    (Type I errors). Traditional multiple testing correction methods, like the <strong>Bonferroni
+                        correction</strong> or the <strong>False Discovery Rate (FDR)</strong>, assume that all tests
+                    are independent, which is not the case in real-world data.</p>
+
+                <p>To account for dependence among tests, we calculate the <strong>effective number of tests</strong>,
+                    which adjusts for correlations. Instead of assuming that all tests are independent, it recognizes
+                    that correlated tests provide less new information than completely independent tests. By calculating
+                    the effective number of tests, we can adjust for the fact that some tests are not entirely new but
+                    share information with others.</p>
+
+                <p>A <strong>linkage disequilibrium (LD) matrix</strong> represents the pairwise correlation between
+                    genetic variants within a particular region of the genome. It quantifies how much the presence of
+                    one variant is non-randomly associated with another.</p>
+
+                <p>In (Stange et. al, 2015) we compute “an effective number of tests of order 3 based on LD information
+                    taken from the international HapMap project (<a href="http://hapmap.ncbi.nlm.nih.gov/"
+                        target="_blank">http://hapmap.ncbi.nlm.nih.gov/</a>).
+                    For exemplary purposes, we restrict our attention to loci on chromosome 21 in the CHD population
+                    (Chinese in Metropolitan Denver).
+                    In total this chromosome comprises M = 18,143 loci.
+                    We divided the chromosome into B = 363 blocks of size 50 each (notice the last of these blocks
+                    comprises only 43 loci).
+                    We consider ν = 2 degrees of freedom corresponding to (2 × 3) contingency tables (i.e. to diploid
+                    genotypes)
+                    and make the assumption that loci from different blocks lead to stochastically independent χ² test
+                    statistics.
+                    Under this assumption the effective number of tests can be calculated for every block separately,
+                    and the total effective number of tests is the sum of the block-specific ones.</p>
+
+                <p>For the entire chromosome we obtained an effective number of tests of order 3 [equal to] 13,676,
+                    meaning that effectively only approximately two-third of the M = 18,143 loci contribute to the
+                    calibration with respect to the FWER level [0.05].”</p>
+
+                <div class=col-lg-12>
+                    <figure>
+                        <img class="img-fluid w-80" loading="lazy" src=./featured1.jpg
+                            alt="Block-specific effective numbers">
+                        <figcaption>Figure 1. Block-specific effective numbers of tests for the real data example […],
+                            where the block size
+                            equals 50. The effective number of tests varies between the blocks. The stronger the
+                            dependence among the test statistics
+                            within a block, the smaller is the effective number of tests. The horizontal line displays
+                            the average effective number of
+                            tests among all considered blocks. (Stange et al, 2015)</figcaption>
+                    </figure>
+                </div>
+
+                <p>We showed through numerical experiments that our methods are faster and more efficient than
+                    traditional Monte Carlo simulations. The efficiency of our approach can be further improved with
+                    advanced techniques for matrix factorization, enhancing the accuracy of multivariate chi-squared
+                    probability calculations.</p>
+
+
+                <p>
+                    <em>Eunseop Kim, Steven N. MacEachern & Mario Peruggia (2023) Empirical likelihood for the analysis
+                        of experimental designs, Journal of Nonparametric Statistics, 35:4, 709-732, DOI:
+                        10.1080/10485252.2023.2206919</em>
+                </p>
+                <p>
+                    <em>Stange, J. & Loginova, N. & Dickhaus, Thorsten. (2015). Computing and approximating multivariate
+                        chi-square probabilities. Journal of Statistical Computation and Simulation. 86. 1-15.
+                        10.1080/00949655.2015.1058798.</em>
+                </p>
+            </div>
+            <div class=article-tags>
+                <a class="badge badge-light">chi-square</a>
+                <a class="badge badge-light">probabilities</a>
+            </div>
+        </div>
+    </article>
+    <div class=container>
+        <footer class=site-footer>
+            <div class=container>
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+
+                        <p class=mb-0>Copyright © 2024 | Powered by
+                            <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic
+                                theme</a>
+                            for <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- External JavaScript Files -->
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js
+        integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js
+        integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js
+        integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js
+        integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin=anonymous></script>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src=./../../js/academia.min.6c2ba2801d406881b3c2277043cedd76.js></script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <!-- Meta Information -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Nina Loginova">
+    <meta name="theme-color" content="#fc6f5c">
+    <meta name="description" content="Missing data in confirmatory clinical trials">
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
+        integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
+        integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css"
+        integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css"
+        crossorigin="anonymous" title="hl-light">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto+Mono&display=swap">
+    <link rel=stylesheet href=../../css/academia.min.b246554d075350d61b44c126dfbcbe05.css>
+    <title>Missing data in confirmatory clinical trials | Nina Loginova</title>
+</head>
+
+<body id=top data-spy=scroll data-target=#TableOfContents data-offset=71>
+    <nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id=navbar-main>
+        <div class=container>
+            <a class=navbar-brand href=../../index.html>Nina Loginova</a>
+            <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar aria-controls=navbar
+                aria-expanded=false aria-label="Toggle navigation">
+                <span>
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id=navbar>
+                <ul class="navbar-nav ml-auto">
+                    <li class=nav-item>
+                        <a class=nav-link href=../../index.html#about>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class=nav-item>
+                        <a class=nav-link href=../../index.html#experience>
+                            <span>Experience</span>
+                        </a>
+                    </li>
+                    <li class=nav-item>
+                        <a class=nav-link href=../../index.html##publications>
+                            <span>Publications</span>
+                        </a>
+                    </li>
+                    <li class=nav-item>
+                        <a class=nav-link href=../../index.html#posts>
+                            <span>Methods</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <article class="article py-5" itemscope itemtype=http://schema.org/Article>
+        <div class="container split-header">
+            <div class="row justify-content-center">
+                <div class=col-lg-8>
+                    <img class="img-fluid w-100" loading="lazy" src=./featured.webp alt="missing data">
+                    <span class=article-header-caption>
+                        Image credit:
+                        <a
+                            href=https://pixabay.com/de/users/tungart7-38741244/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8676548 />
+                        <strong>Pixabay</strong>
+                        </a>
+                    </span>
+                </div>
+                <div class=col-lg-8>
+                    <h1>Missing data in confirmatory clinical trials</h1>
+                    <meta content itemprop=datePublished>
+                    <meta content itemprop=dateModified>
+                    <div class=article-metadata>
+                        <div>
+                            <span>
+                                <a href=https://de.linkedin.com/in/nina-loginova />Nina Loginova</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class=article-container>
+            <div class=article-style itemprop=articleBody>
+
+                <h3>Introduction</h3>
+                <p>
+                    Missing data is a critical issue in clinical trials, particularly in confirmatory studies where the
+                    accuracy of results can directly influence regulatory and clinical decisions. There is no single
+                    method that universally adjusts for missing data, and the choice of approach can affect the
+                    conclusions of a trial. Efforts should be made to minimize missing data, as its presence can lead to
+                    biased outcomes. For instance, if the missing data disproportionately favor the experimental
+                    treatment, this may distort the analysis.
+                </p>
+                <p>
+                    It is crucial to investigate the robustness of trial results by employing appropriate sensitivity
+                    analyses, which incorporate different assumptions about the nature of the missing data. Patients may
+                    withdraw from a trial for many reasons, including adverse events, treatment success or failure, or
+                    other unrelated circumstances like relocation. When data is missing because patients withdraw from a
+                    trial, it poses a significant risk of bias in estimating the treatment effect.
+                </p>
+
+                <h3>Handling of Missing Data</h3>
+                <p>Missing data can be categorized under three general types:</p>
+                <ul>
+                    <li>
+                        <strong>Missing Completely at Random (MCAR):</strong> The probability of missing data is
+                        unrelated to any observed or unobserved data. A typical example is a patient moving to another
+                        city for non-health reasons. Patients who drop out of a study for this reason could be
+                        considered a random and representative sample from the total study population.
+                    </li>
+                    <li>
+                        <strong>Missing at Random (MAR):</strong> The likelihood of missing data is related to observed
+                        data but not the unobserved data. For instance, when a patient drops out due to lack of efficacy
+                        reflected by a series of poor efficacy outcomes that have been observed, it would be appropriate
+                        to impute or model poor efficacy outcomes subsequently for this patient.
+                    </li>
+                    <li>
+                        <strong>Missing Not at Random (MNAR):</strong> The missing data is related to the unobserved
+                        outcomes, making it more challenging to handle. For example, it may happen that after a series
+                        of visits with good outcomes, a patient drops out due to lack of efficacy.
+                    </li>
+                </ul>
+
+                <h3>Methods of Handling Missing Data</h3>
+                <p>
+                    In confirmatory trials, primary analyses must ensure that any bias in favor of the experimental
+                    treatment is excluded. Various imputation techniques can help handle missing data while considering
+                    different assumptions.
+                </p>
+                <p>
+                    <strong>Single imputation methods</strong>, like <strong>Last Observation Carried Forward
+                        (LOCF)</strong>, use the last recorded value for a patient to fill in subsequent missing data.
+                    While simple, this method can lead to biased estimates, particularly if patients withdraw early due
+                    to adverse events. Similarly, <strong>Baseline Observation Carried Forward (BOCF)</strong> assumes
+                    that a patient’s condition reverts to baseline, useful in scenarios like chronic pain trials where
+                    symptoms may return to baseline after discontinuation.
+                </p>
+                <p>
+                    Other methods, like <strong>best/worst case imputation</strong>, replace missing data with either
+                    the best or worst possible outcomes, depending on the reason for withdrawal. This method, however,
+                    is often used in sensitivity analyses rather than as the primary approach.
+                </p>
+                <p>
+                    <strong>Multiple imputation (MI)</strong> generates multiple datasets, replaces missing data with
+                    plausible values, and combines the results to produce more reliable estimates. MI is preferred in
+                    many cases as it incorporates the uncertainty around missing values, reducing bias compared to
+                    single imputation methods.
+                </p>
+
+
+                <h3>Mixed Models and Generalized Estimating Equations</h3>
+                <p>
+                    When analyzing repeated measures data, methods like Mixed-Effect Models for Repeated Measures (MMRM)
+                    and generalized estimating equations (GEE) are commonly used. These models account for the
+                    correlation between repeated measurements over time, offering a robust approach to handling missing
+                    data.
+                </p>
+                <p>
+                    <strong>Mixed-Effect Models for Repeated Measures (MMRM)</strong> are frequently employed in
+                    clinical trials, especially when dealing with outcomes measured at multiple time points. MMRM
+                    handles missing data without imputing values by using all available information and estimating
+                    parameters through maximum likelihood.
+                </p>
+                <p>
+                    For example, in a clinical trial comparing a drug to a placebo for patients with chronic pain, where
+                    pain levels are measured at baseline and weeks 4, 8, and 12, some patients may miss visits. The MMRM
+                    model is given by:
+                </p>
+                <p style="text-align:center;">
+                    Y<sub>ij</sub> = β<sub>0</sub> + β<sub>1</sub> (Drug vs. Placebo)<sub>i</sub> + β<sub>2</sub>
+                    (Time)<sub>j</sub> + β<sub>3</sub> (Drug × Time)<sub>ij</sub> + b<sub>i</sub> + ε<sub>ij</sub>
+                </p>
+                <p>
+                    This analyzes the outcome (Y<sub>ij</sub>) for patient (i) at time (j), where the fixed effects (β)
+                    represent the treatment, time, and their interaction, while the random effect (b<sub>i</sub>)
+                    captures differences between patients, and ε<sub>ij</sub> is the residual error.</p>
+                <p>
+                    MMRM incorporates all available data and the correlation between measurements over time, providing a
+                    more accurate assessment of treatment effects even when data is missing. For instance, if a patient
+                    misses a follow-up visit due to worsening symptoms, MMRM still leverages the data from their
+                    previous assessments, ensuring their experience contributes to understanding the drug's
+                    effectiveness. This way, even with incomplete data, it is possible to gain insights that might be
+                    overlooked with more simplistic analysis methods.
+                </p>
+                <p>
+                    <em>
+                        European Medicines Agency. (2024). Guideline on missing data in confirmatory clinical trials.
+                        <a
+                            href=https://www.tga.gov.au/sites/default/files/2024-06/guideline-missing-data-confirmatory-clinical-trials-ema.pdf>https://www.ema.europa.eu/en/documents/scientific-guideline/ich-e9-r1-addendum-Missing
+                        </a>
+                    </em>
+                </p>
+
+            </div>
+            <div class=article-tags>
+                <a class="badge badge-light">>Missing data</a>
+                <a class="badge badge-light">Clinical Studies</a>
+            </div>
+        </div>
+    </article>
+    <div class=container>
+        <footer class=site-footer>
+            <div class=container>
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+
+                        <p class=mb-0>Copyright © 2024 | Powered by
+                            <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic
+                                theme</a>
+                            for <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- External JavaScript Files -->
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js
+        integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js
+        integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js
+        integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js
+        integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin=anonymous></script>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src=./../../js/academia.min.6c2ba2801d406881b3c2277043cedd76.js></script>
+</body>
+
+</html>
